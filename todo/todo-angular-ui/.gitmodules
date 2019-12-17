@@ -1,0 +1,3 @@
+[submodule "todo/todo-angular-ui"]
+	path = todo/todo-angular-ui
+	url = https://github.com/tonyhe2k/demo.git
