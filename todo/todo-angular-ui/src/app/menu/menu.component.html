@@ -4,14 +4,14 @@
         <div class="navbar-header">
 
             <ul class="navbar-nav">
-                <li class="nav-item"><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome/Tony" class="nav-link">Home</a></li>
-                <li class="nav-item"><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/todos" class="nav-link">Todos</a></li>
+                <li class="nav-item"><a *ngIf="authAPIService.isUserLoggedIn()" routerLink="/welcome/Tony" class="nav-link">Home</a></li>
+                <li class="nav-item"><a *ngIf="authAPIService.isUserLoggedIn()" routerLink="/todos" class="nav-link">Todos</a></li>
             </ul>
         </div>
         <div id="navbar" class="collapsenavbar-collapse">
             <ul class="navbar-nav navbar-collapse justify-content-end">
-                <li class="nav-item"><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
-                <li class="nav-item"><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+                <li class="nav-item"><a *ngIf="!authAPIService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+                <li class="nav-item"><a *ngIf="authAPIService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
             </ul>
         </div>
     </div>
