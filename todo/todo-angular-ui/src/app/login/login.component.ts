@@ -29,9 +29,13 @@ export class LoginComponent implements OnInit {
   handelLogin() {
     this.authAPIService.doJwtAuth(this.username, this.password).subscribe(
       data =>{
-        console.log(data)
-        // this.router.navigate(["welcome", this.username])
-        this.router.navigateByUrl(this.returnUrl);
+        console.log(this.returnUrl)
+        
+        if(this.returnUrl === '/') {
+          this.router.navigate(["welcome", this.username])
+        } else {
+          this.router.navigateByUrl(this.returnUrl);
+        }
         this.invalidLogin = false
       }, 
       error => {
